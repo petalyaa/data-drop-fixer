@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp" >
+
+    <ListView
+        android:id="@+id/historyListItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+    
+    <RelativeLayout
+        android:id="@+id/mainNoHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/imageNoHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/labelNoHistory"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/file_warning" />
+        
+        <TextView
+            android:id="@+id/labelNoHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="No history found"
+            android:textColor="#4282C4"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            android:typeface="normal" >
+            
+        </TextView>
+        
+    </RelativeLayout>
+    
+</RelativeLayout>

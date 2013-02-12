@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Data Drop Fixer</string>
+    <string name="title_section3">Setting</string>
+    <string name="title_section2">History</string>
+    <string name="title_section1">Service</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="service_msg">Press start service to start monitoring for connection or stop to stop the service.</string>
+    <string name="setting_msg">Adjust below\'s value to your desired configuration.</string>
+    <string name="invalid_action">Invalid Action</string>
+    <string name="start_service_button">Start service</string>
+    <string name="stop_service_button">Stop service</string>
+    <string name="to_do">Work in Progress</string>
+    <string name="host_name">HostName</string>
+    <string name="host_name_hint">eg : google.com, yahoo.com</string>
+    <string name="checking_interval">Checking Interval : </string>
+    <string name="credit_email">For any suggestion, please send me an email : petalyaa@gmail.com</string>
+    <string name="default_setting">Default</string>
+    <string name="update_setting">Update</string>
+    <string name="information_bottom">INFORMATION</string>
+    <string name="service_status">Service Status : </string>
+    <string name="connection_status">Network Status : </string>
+    <string name="network_type">Network Type : </string>
+    <string name="menu_about">About</string>
+    <string name="connected">Connected</string>
+    <string name="not_connected">Not Connected</string>
+    <string name="started">Started</string>
+    <string name="not_started">Not Started</string>
+    <string name="network_type_2g">2G Only</string>
+    <string name="network_type_mix">Mobile</string>
+    <string name="network_type_wifi">WIFI</string>
+    <string name="maximum_attempt">Maximum attempt</string>
+    <string name="setting_note">Any changes made will be automatically saved.</string>
+    <string name="start_on_boot">Start on boot complete</string>
+    <string name="time_type_prompt">Choose interval type</string>
+    
+    <string name="msg_clear_history_success">Successfully cleared history.</string>
+    <string name="msg_clear_history_failed">Failed to clear history.</string>
+    
+    <string name="msg_refresh_history_success">Successfully refreshed history.</string>
+    <string name="msg_refresh_history_failed">Failed to refresh history.</string>
+    
+    <string name="menu_clear_history">Clear history</string>
+    <string name="menu_refresh_history">Refresh history</string>
+    
+    <string name="date_occur">Date : </string>
+    <string name="time_occur">Time : </string>
+    <string name="time_taken_to_fix">Time taken to fix : </string>
+    <string name="seconds">Seconds</string>
+	<string name="minutes">Minutes</string>
+	<string name="hours">Hours</string>
+    
+    <string-array name="time_type_arrays">
+        <item>Seconds</item>
+        <item>Minutes</item>
+        <item>Hours</item>
+    </string-array>
+
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_about">About</string>
+    <string name="title_about_content">This tool is created as a workaround for data drop issue happened in most of non-sense rom.</string>
+    <string name="title_workaround">Workaround</string>
+    <string name="title_information">Information</string>
+    <string name="title_workaround_content">This apps will use your data to ping to the internet based on your preference on n interval. Once ping failed while you are on mobile data connection, this app will try to fix it by disconnect the network and re-connect it back until it can ping to the internet successfully.</string>
+
+    <string name="button_close">Close</string>
+    
+    <string name="title_contact">Contact Info</string>
+    <string name="title_contact_content">Email : petalyaa@gmail.com</string>
+    <string name="title_contact_name">Name : Mohd Khairul Ikhwan Kamarudin</string>
+    
+    <string name="toggle_airplane_mode">Toggle airplane mode when data drop happened.</string>
+    
+</resources>

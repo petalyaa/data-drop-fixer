@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="default_checking_interval">5</integer>
+    <integer name="default_maximum_attempt">50</integer>
+    
+    <integer name="minimum_checking_interval">5</integer>
+    <integer name="maximum_checking_interval">60</integer>
+    
+    <integer name="minimum_attempt">50</integer>
+    <integer name="maximum_attempt">100</integer>
+</resources>
