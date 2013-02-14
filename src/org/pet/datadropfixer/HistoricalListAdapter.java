@@ -3,7 +3,6 @@ package org.pet.datadropfixer;
 import java.util.ArrayList;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +10,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 public class HistoricalListAdapter extends BaseAdapter {
-	
-	private static final String TAG = "Adapter";
 	
 	private ArrayList<HistoricalData> data;
 	

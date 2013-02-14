@@ -1,24 +1,20 @@
 package org.pet.datadropfixer;
 
-import java.io.File;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
+import java.util.Locale;
 
+import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,16 +24,12 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.TwoLineListItem;
 
 public class MainActivity extends FragmentActivity implements
 		ActionBar.TabListener {
@@ -55,8 +47,6 @@ public class MainActivity extends FragmentActivity implements
 	private static final String TAG_SERVICE = "DataDropFixer_Service";
 
 	private static final String TAG_SETTING = "DataDropFixer_Setting";
-
-	private static final String TAG_HISTORY = "DataDropFixer_History";
 
 	private FragmentActivity parent;
 
@@ -90,8 +80,6 @@ public class MainActivity extends FragmentActivity implements
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
-
-		final Menu newMenu = menu;
 
 		// When swiping between different sections, select the corresponding
 		// tab. We can also use ActionBar.Tab#select() to do this if we have
@@ -247,11 +235,11 @@ public class MainActivity extends FragmentActivity implements
 		public CharSequence getPageTitle(int position) {
 			switch (position) {
 			case 0:
-				return getString(R.string.title_section1).toUpperCase();
+				return getString(R.string.title_section1).toUpperCase(Locale.US);
 			case 1:
-				return getString(R.string.title_section2).toUpperCase();
+				return getString(R.string.title_section2).toUpperCase(Locale.US);
 			case 2:
-				return getString(R.string.title_section3).toUpperCase();
+				return getString(R.string.title_section3).toUpperCase(Locale.US);
 			}
 			return null;
 		}
@@ -261,15 +249,13 @@ public class MainActivity extends FragmentActivity implements
 	 * A dummy fragment representing a section of the app, but that simply
 	 * displays dummy text.
 	 */
+	@SuppressLint("ValidFragment")
 	public class DummySectionFragment extends Fragment {
 		/**
 		 * The fragment argument representing the section number for this
 		 * fragment.
 		 */
 		public static final String ARG_SECTION_NUMBER = "section_number";
-
-		public DummySectionFragment() {
-		}
 
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -382,11 +368,8 @@ public class MainActivity extends FragmentActivity implements
 						.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 							@Override
-							public void onItemSelected(AdapterView<?> par,
-									View arg1, int pos, long id) {
-								String selectedValue = par
-										.getItemAtPosition(pos).toString()
-										.toLowerCase();
+							public void onItemSelected(AdapterView<?> par, View arg1, int pos, long id) {
+								String selectedValue = par.getItemAtPosition(pos).toString().toLowerCase(Locale.US);
 								Log.v(TAG_SETTING, "Selecting " + selectedValue
 										+ " for interval type.");
 
